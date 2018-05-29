@@ -10433,3 +10433,7 @@ ul.dropdown-menu.dropdown-user {
   text-align: center;
 }
 
+.form-control {
+  height: 34px !important;
+}
+
