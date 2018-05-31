@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddImageIdToUsersTable extends Migration
+class AddPhotoIdToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class AddImageIdToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->integer('image_id')->nullable();
+            $table->string('photo_id')->default(0)->nullable();
         });
     }
 
@@ -28,7 +28,7 @@ class AddImageIdToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->dropColumn('image_id');
+            $table->dropColumn('photo_id');
         });
     }
 }
