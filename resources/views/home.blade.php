@@ -16,6 +16,13 @@
 
                     You are logged in!
                 </div>
+                @if(Auth::check())
+                    @if(Auth::user()->isAdmin())
+                        <div class="align-middle">
+                            <a class="btn btn-primary" href="{{ route('admin.index') }}">Goto Admin</a>
+                        </div>
+                    @endif
+                @endif
             </div>
         </div>
     </div>
